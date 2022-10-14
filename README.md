@@ -1,15 +1,7 @@
-Welcome to your new dbt project!
+Note: This repository is still a work in progress, and it is not recommended to add this as a package in your DBT project yet.
 
-### Using the starter project
+# Beautiful Snowflake Utils - DBT Package
+This package contains a set of useful DBT resources that utilizes useful Snowflake features. The package includes macros and example models. You can import this as a DBT package in your own DBT project in order to use these macros and models.
 
-Try running the following commands:
-- dbt run
-- dbt test
-
-
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+# Install the Package
+TODO
