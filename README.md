@@ -1,11 +1,6 @@
 # dbt-sleet
 This package provides various additional utilities for dbt usage on Snowflake, such as macros for utilizing Snowflake-specific features.
 
-# Package Installation
-
-# Package Macro Usage
-
-# Available Macros
 # How to add this package to your DBT Project
 Simply add the following to your project's `package.yml` file:
 ```yaml
