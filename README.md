@@ -17,7 +17,7 @@ Then ensure you run `dbt deps` to install the package
 
 # How to use this package
 ## Using supplied macros
-You can reference the macros supplied in this package by calling the macro name as usual, prefixed with `beautiful_snowflake_utils.`
+You can reference the macros supplied in this package by calling the macro name as usual, prefixed with `dbt_sleet.`
 
 For example, to call the `hello_beautiful()` macro in your DBT project, you can call it in your SELECT statement as such:
 ```sql
