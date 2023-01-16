@@ -53,21 +53,20 @@ This applies a Snowflake tag to a Snowflake object. The object can be a table/vi
  - The user/role/service account that DBT will assume when running, must have APPLY privilege to this tag
 
 #### Arguments
- - `parent_object_type`: The table/view level object. For tagging tables/views, this will be the same value as `target_object_type`. For tagging columns, this field will determine whether the column belongs to a table or view. Accepted values: `TABLE`, `VIEW`
- - `target_object_type`: The type of the Snowflake object that will be tagged. Accepted values: `TABLE`, `VIEW`, `COLUMN`)
- - `target_object_name`: The full name of the Snowflake object. For tables/views this is a 3 part name: DATABASE.SCHEMA.TABLE. For column this must be a 4-part name: DATABASE.SCHEMA.TABLE.COLUMN
- - `full_tag_name`: The fully qualified tag name (e.g. `MYDB.MYSCHEMA.some_tag`)
+ - `object_type`: The type of the Snowflake object that will be tagged. Accepted values: `TABLE`, `VIEW`, `COLUMN`)
+ - `object_name`: The full name of the Snowflake object. For tables/views this is a 3 part name: DATABASE.SCHEMA.TABLE. For column this must be a 4-part name: DATABASE.SCHEMA.TABLE.COLUMN
+ - `tag_name`: The fully qualified tag name (e.g. `MYDB.MYSCHEMA.some_tag`)
  - `tag_value`: The case-sensitive value to set for the tag. If the tag has limited allowed values, this will fail if your value does not meet the criteria.
 
 #### Usage
 ##### Basic macro call for table tagging
 ```jinja
-apply_snowflake_tag('TABLE', 'TABLE', 'MYPRODUCT_SANDBOX.SOME_SCHEMA.A_COOL_TABLE', 'MYDB.MYSCHEMA.some_tag', 'MyTagValue')
+apply_snowflake_tag('TABLE', 'MYPRODUCT_SANDBOX.SOME_SCHEMA.A_COOL_TABLE', 'MYDB.MYSCHEMA.some_tag', 'MyTagValue')
 ```
 
 ##### Basic macro call for column tagging
 ```jinja
-apply_snowflake_tag('TABLE', 'COLUMN', 'MYPRODUCT_SANDBOX.SOME_SCHEMA.A_COOL_TABLE.THIS_IS_A_COLUMN', 'MYDB.MYSCHEMA.some_other_tag', 'MyTagValue')
+apply_snowflake_tag('COLUMN', 'MYPRODUCT_SANDBOX.SOME_SCHEMA.A_COOL_TABLE.THIS_IS_A_COLUMN', 'MYDB.MYSCHEMA.some_other_tag', 'MyTagValue')
 ```
 
 ##### In a on-run-end hook
