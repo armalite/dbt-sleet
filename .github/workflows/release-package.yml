@@ -1,0 +1,28 @@
+name: Node.js Package
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build-tar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Compress action step
+        uses: a7ul/tar-action@v1.1.0
+        id: compress
+        with:
+          command: c
+          cwd: ./
+          files: |
+            ./toCompress
+          outPath: yolo.tar.gz
+      - name: Extract files
+        uses: a7ul/tar-action@v1.1.0
+        id: extract
+        with:
+          command: x
+          cwd: ./extract
+          files: yolo.tar.gz
+
