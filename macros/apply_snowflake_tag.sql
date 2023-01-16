@@ -1,3 +1,4 @@
+
 {% macro apply_snowflake_tag(object_type, object_name, tag_name, tag_value) %}
 
   {% if object_type is not none and object_name is not none and tag_name is not none and tag_value is not none  %}
