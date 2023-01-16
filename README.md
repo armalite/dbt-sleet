@@ -1,4 +1,4 @@
-# dbt-beautiful-snowflake-utils
+# dbt-sleet
 This package provides various additional utilities for dbt usage on Snowflake, such as macros for utilizing Snowflake-specific features.
 
 # Package Installation
@@ -10,7 +10,7 @@ This package provides various additional utilities for dbt usage on Snowflake, s
 Simply add the following to your project's `package.yml` file:
 ```yaml
 packages:
-  git: "https://github.com/Armalite/dbt-beautiful-snowflake-utils.git"
+  git: "https://github.com/Armalite/dbt-sleet.git"
   revision: 0.0.1
 ```
 Then ensure you run `dbt deps` to install the package
@@ -21,7 +21,7 @@ You can reference the macros supplied in this package by calling the macro name 
 
 For example, to call the `hello_beautiful()` macro in your DBT project, you can call it in your SELECT statement as such:
 ```sql
-SELECT beautiful_snowflake_utils.hello_beautiful()
+SELECT dbt_sleet.hello_beautiful()
 ```
 
 # Available Macros
@@ -38,7 +38,7 @@ None
   
 #### Usage
 ```jinja
-beautiful_snowflake_utils.hello_beautiful()
+dbt_sleet.hello_beautiful()
 ```
 </details>
 
@@ -85,3 +85,4 @@ With the above example, you can have the following config in your `model/` files
 )
 ```
 </details>
+
